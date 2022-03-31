@@ -1,7 +1,9 @@
-module.exports = {
-  plugins: {
-    'postcss-preset-env': {
-      browsers: 'last 2 versions',
-    },
-  },
-}
+module.exports = () => {
+  return {
+    plugins: [
+      require('postcss-import'),
+      require('tailwindcss'),
+      require('autoprefixer')
+    ]
+  };
+};
